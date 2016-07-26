@@ -1,9 +1,10 @@
 FROM debian:jessie
 
-RUN apt-get update
+RUN apt-get update \
+        && apt-get install --fix-missing -y curl \
+	&& rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y curl
-
-RUN apt-get install -y mono-devel
+RUN apt-get update \
+        && apt-get install --fix-missing -y mono-devel
 
 RUN mono --version
