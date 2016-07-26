@@ -6,5 +6,7 @@ RUN apt-get update \
 
 RUN apt-get update \
         && apt-get install --fix-missing -y mono-devel
+        
+RUN mozroots --import --sync
 
 RUN mono --version
