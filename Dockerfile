@@ -11,3 +11,4 @@ RUN echo "deb http://download.mono-project.com/repo/debian wheezy/snapshots/3.12
 	&& apt-get install -y mono-devel ca-certificates-mono fsharp mono-vbnc nuget \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN mono --version
